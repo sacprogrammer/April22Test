@@ -1,0 +1,42 @@
+
+public class dices {
+
+  private int lowBound;
+	private int highBound;
+	
+	public dices()
+	{
+		lowBound = 1;
+		highBound = 6;
+	}
+	
+	public dices(int lowerlimit, int highlimit)
+	{
+		lowBound = lowerlimit;
+		highBound = highlimit;
+	}
+	
+	public int diceroll_1_thru_6()
+	{
+		int dice;
+		dice = 1+(int)(Math.random()*6);
+		return dice;
+	}
+
+	public int dicerolllimit(int low, int high)
+	{
+		int dice;
+		dice = low+(int)(Math.random()*high);
+		return dice;
+	}		
+	
+	 public void displayMessage(int dice, int guess)
+	 {
+			if(dice == guess)		
+			{
+				System.out.println("Your right! It was " + guess);
+			}
+			else
+				System.out.println("Sorry... You guessed " + guess + "and the number was " + dice);
+	 }
+}
