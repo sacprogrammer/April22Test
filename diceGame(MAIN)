@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class diceGame {
+
+  public static void main(String[] args) {
+
+		  Scanner input = new Scanner(System.in);
+		  
+		  dices gameon = new dices();
+		  
+		  System.out.println("Lets roll a dice\nChoose you low game number (1-3)");
+		  int playerGuess = Integer.parseInt(input.nextLine());
+
+		  gameon.displayMessage(gameon.dicerolllimit(1,3), playerGuess);
+		  
+		  System.out.println("Now choose your high game number (4-6)");
+		  int playerGuess2 = Integer.parseInt(input.nextLine());
+
+		  gameon.displayMessage(gameon.dicerolllimit(4,6), playerGuess2);
+		  
+	}
+
+}
